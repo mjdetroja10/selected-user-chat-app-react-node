@@ -1,0 +1,107 @@
+.contacts-name {
+    padding: 16px 0 0 0;
+    margin-left: 16px;
+    height: 100vh;
+}
+.all-name {
+    height: calc(100vh - 95px);
+    overflow: auto;
+}
+.all-name::-webkit-scrollbar {
+    width: 4px;
+
+}
+.all-name::-webkit-scrollbar-track {
+    background: #000; 
+}
+.all-name::-webkit-scrollbar-thumb {
+    background: #aaa; 
+}
+.user-profile {
+    margin-bottom: 16px;
+}
+.user-profile p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: #6528F7;
+}
+
+.user-profile p span {
+    font-size: 18px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    display: block;
+    color: #6528F7;
+    letter-spacing: 6px;
+}
+
+.contact-name {
+    width: 100%;
+    overflow: hidden;
+}
+
+.contact-card {
+    display: inline-flex;
+    align-items: center;
+    margin: 14px 0;
+    width: 100%;
+}
+
+.contact-card img {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+    margin-right: 16px;
+    object-fit: cover;
+}
+
+.contact-card p {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Signika', sans-serif;
+    margin-bottom: 0;
+    color: #000;
+    line-height: 1;
+}
+
+.contact-card span {
+    line-height: 1.2;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Exo 2', sans-serif;
+    color: #666;
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    max-width: 250px;
+}
+
+.contact-card span.typing {
+    color: #6528F7;
+}
+
+@media (max-width: 1040px) {
+    .contacts-name .contact-card span {
+        width: calc(100% - 30px);
+    }
+}
+
+@media (max-width: 767px) {
+    .user-profile p {
+        font-size: 20px;
+    }
+    .contact-card img {
+        min-width: 45px;
+        width: 45px;
+        height: 45px;
+        margin-right: 8px;
+    }
+    .contact-card p {
+        font-size: 16px;
+    }
+}
