@@ -1,0 +1,173 @@
+.chatbox {
+    padding: 16px;
+    height: 100vh;
+    /* overflow: auto; */
+    background: #6528F7;
+    position: relative;
+}
+.chatbox .userbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 8px;
+}
+.chatbox .userbox .user {
+    display: flex;
+    align-items: center;
+}
+.chatbox .userbox svg {
+    font-size: 24px;
+    fill: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.chatbox .userbox svg:hover {
+    fill: #aaa;
+}
+
+.chatbox .userbox .logout svg path {
+    fill: #fff;
+    transition: all 0.3s;
+}
+.chatbox .userbox .logout svg:hover path {
+    fill: #aaa;
+}
+.chatbox .userbox img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+.chatbox .userbox .name-box {
+    margin-left: 16px;
+}
+.chatbox .userbox .name-box.online {
+    position: relative;
+}
+.chatbox .userbox .name-box.online::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 6px;
+    right: -12px;
+    background: greenyellow;
+    border-radius: 50%;
+}
+.chatbox .userbox .name-box p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1;
+    font-family: 'Signika', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.chatbox .userbox .name-box span {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    font-family: 'Signika', sans-serif;
+    font-weight: 400;
+}
+.userchat {
+    height: calc(100vh - 189px);
+    max-height: 100vh;
+    overflow: auto;
+    position: relative;
+    padding-right: 16px;
+}
+.userchat::-webkit-scrollbar {
+    width: 4px;
+
+}
+.userchat::-webkit-scrollbar-track {
+    background: #fff; 
+}
+.userchat::-webkit-scrollbar-thumb {
+    background: #000; 
+}
+.userchat p {
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 1.2;
+}
+.userchat p+p {
+    margin-top: 12px !important;
+}
+
+.userchat .left {
+    text-align: left;
+    margin: 0;
+    background-color: #a687ed;
+    color: #fff;
+    border-radius: 0 10px 10px 10px;
+    width: max-content;
+    max-width: 75%;
+}
+
+.userchat .right {
+    text-align: left;
+    margin: 0;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px 0 10px 10px;
+    width: max-content;
+    margin-left: auto;
+    max-width: 75%;
+}
+.form-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #6528F7;
+    padding: 16px;
+    box-shadow: rgba(101,40,247) 0px -3px 12px;
+}
+
+.form-box input[type="text"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #6528F7;
+    padding: 16px 45px 16px 16px;
+    border-radius: 40px;
+    background-color: #fff;
+}
+
+.form-box input[type="submit"] {
+    background-image: url(../../public/Images/submit-arrow.png);
+    position: absolute;
+    right: 18px;
+    bottom: 22px;
+    padding: 0;
+    border-radius: 40px;
+    background-color: #fff;
+    width: 45px;
+    height: 45px;
+    text-indent: -1000px;
+    border: none;
+    outline: none;
+    background-repeat: no-repeat;
+    background-size: 28px;
+    background-position: center;
+    transition: all 0.3s;
+}
+
+.form-box input[type="submit"]:hover {
+    background-color: #eee;
+}
+
+@media (max-width: 576px) {
+    .form-box .row .col-lg-10.col-md-10.col-sm-10 {
+        width: 80%;
+    }
+
+    .form-box .row .col-lg-2.col-md-2.col-sm-2 {
+        width: 20%;
+    }
+}
